@@ -1,6 +1,6 @@
 body{
     margin : 1px; 
-
+    
 }
 #body-header{
     height :60vh;
@@ -10,6 +10,21 @@ body{
     background-position: center;
     background-attachment: fixed;
 }
+/* section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+section{
+    /* margin-top: -8.9px; */
+    padding: 0px;
+    background-image: url(bag.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 @media screen and (max-width:576px){
     #body-header{
         height:50vh;
@@ -20,10 +35,44 @@ body{
         height :60vh;
     }
 } */
-
+.button {
+    position: relative;
+    background-color: #8deac8;
+    border: none;
+    font-size: 1rem;
+    color: #090808;
+    padding: 3px;
+    /* width: 200px; */
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .button:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  .button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
 .horizontal-list{
     list-style: none;
     padding: 0px;
+    font-weight: 450;
 
 }
 .horizontal-list li {
@@ -42,10 +91,10 @@ body{
     transition: color 0.5s;
 }
 .horizontal-list li p:hover{
-    color: rgb(32, 178, 170);
+    color: rgb(4, 53, 51);
 }
 .horizontal-list li a:hover{
-    color: rgb(32, 178, 170);
+    color: rgb(6, 63, 60);
 }
 .text-center{
     text-align: center;
@@ -54,12 +103,45 @@ body{
     margin-top:12vh;
 
 }
+#Hello{
+    font-size: 1.2rem;
+    /* letter-spacing: 0.1rem; */
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
 #my-name{
     font-size: 3rem;
     letter-spacing: 0.1rem;
     color: white;
-    font-weight: 700;
+    font-weight: 600;
+    
 }
+.waviy {
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  .waviy span {
+    /* font-family: 'Alfa Slab One', cursive; */
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    animation: waviy 1.5s infinite;
+    animation-delay: calc(.1s * var(--i));
+    
+  }
+  @keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+  }
+
 .social-icons li a i{
     padding: 10px;
     font-size: 2rem;
@@ -119,12 +201,6 @@ body{
         margin-top:50%;
     }
     
-}
-section{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 /* #skiils{
     height: auto;
@@ -210,11 +286,12 @@ section{
 #education{
     height:auto;
     background-color:lightgray;
-    margin-top:100px;
+    /* margin-top:100px; */
 }
 .outer-div{
     width: 75%;
     position: relative;
+    font-size: 1.2rem;
 }
  .internal-div{
     width: 40%;
@@ -344,6 +421,13 @@ section{
 }
 
 @media screen and (max-width:768px) {
+    .waviy {
+        position: relative;
+        -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 600;
+      }
     .right-div{
         width: 70%;
         /* border: 2px solid red; */
@@ -352,6 +436,13 @@ section{
     
 }
 @media screen and (max-width: 576px){
+    .waviy {
+        position: relative;
+        -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 600;
+      }
     .left-div{
         width: 80%;
         /* border: 2px solid red; */
