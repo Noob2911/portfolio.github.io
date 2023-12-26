@@ -81,6 +81,28 @@ function checkscroll() {
     }
 }
 
+const name  =document.getElementById('name');
+const email  =document.getElementById('email');
+const phone  =document.getElementById('phone');
 
+const submit= document.getElementsByClassName('form-contact')[0];
+
+submit.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    console.log("clicked");
+
+    Email.send({
+        SecureToken : "06b41583-6aeb-4585-8eb3-bfd9bca56a62",
+        To : 'surajkumarkharwar444@gmail.com',
+        From : "surajkumarkharwar444@gmail.com",
+        Subject : "New massage from portfolio",
+        Body : "Name: " + document.getElementById("name").value
+                + "<br> Email: " + document.getElementById("email").value
+                + "<br> Phone no: " + document.getElementById("phone").value
+                + "<br> Message: " + document.getElementById("message").value
+    }).then(
+      message => alert("Message Sent Succesfully!"))
+    ;
+})
 
 
